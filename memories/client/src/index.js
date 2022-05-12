@@ -8,6 +8,7 @@ import { createRoot } from 'react-dom/client';
 //ReactDOM.render(<App />, document.getElementById('root'));
 
 // new implementation, after React 18 (released Mar 2022)
+// requires: [import { createRoot } from 'react-dom/client';]. See line 4.
 const container = document.getElementById('root');
 const root = createRoot(container);
 root.render(<App />)
