@@ -5,7 +5,6 @@ import openai
 import argparse
 import logging
 import re
-from abc import ABC
 
 # global variable to ensure the GPT-3 API isn't overloaded by a long user prompt.
 MAX_INPUT_LENGTH = 32
