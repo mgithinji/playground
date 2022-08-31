@@ -1,7 +1,9 @@
 from fastapi import FastAPI, HTTPException
 from GenCopy import generate_tagline, generate_keywords, MAX_INPUT_LENGTH
+from mangum import Mangum # used for creating the handler
 
 app = FastAPI()
+handler = Mangum(app=app) # handler for Lambda function to invoke
 
 # API for generating a tagline
 @app.get("/generate_tagline")
