@@ -1,6 +1,5 @@
 from typing import List
 import os
-from urllib import response
 import openai
 import argparse
 import logging
@@ -49,7 +48,7 @@ def _format_keywords_text(s: str) -> List[str]:
 # generate a business tagline based on user-provided prompt
 def generate_tagline(prompt: str, max_tokens: int=20) -> str:
     # load OpenAI API key
-    openai.api_key = os.getenv('OPEN_AI_KEY')
+    openai.api_key = os.getenv('OPENAI_API_KEY')
 
     # prompt for GPT-3 model
     enriched_prompt = "Write a confident tagline for a {} shop:".format(prompt)
@@ -66,7 +65,7 @@ def generate_tagline(prompt: str, max_tokens: int=20) -> str:
 # generate business keywords based on user-provided prompt
 def generate_keywords(prompt: str, max_tokens: int=20) -> List[str]:
     # load OpenAI API key
-    openai.api_key = os.getenv('OPEN_AI_KEY')
+    openai.api_key = os.getenv('OPENAI_API_KEY')
 
     # prompt for GPT-3 model
     enriched_prompt = "Generate related keywords for {} shop:".format(prompt)

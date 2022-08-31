@@ -38,5 +38,5 @@ def validate_prompt(prompt: str):
     if len(prompt) >= MAX_INPUT_LENGTH:
         raise HTTPException(status_code=400, detail="Prompt exceeds max length of {} characters.".format(MAX_INPUT_LENGTH))
 
-# To make the API live, run the following in the terminal
+# To make the API live locally, run the following in the terminal
 # uvicorn GenCopyAPI:app --reload
