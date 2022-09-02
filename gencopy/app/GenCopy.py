@@ -51,7 +51,7 @@ def generate_tagline(prompt: str, max_tokens: int=20) -> str:
     openai.api_key = os.getenv('OPENAI_API_KEY')
 
     # prompt for GPT-3 model
-    enriched_prompt = "Write a confident tagline for a {} shop:".format(prompt)
+    enriched_prompt = "Write a confident tagline for a {} business:".format(prompt)
 
     # calling the API and grabbing the response
     response = openai.Completion.create(model="text-davinci-002", prompt=enriched_prompt, max_tokens=max_tokens)
@@ -68,7 +68,7 @@ def generate_keywords(prompt: str, max_tokens: int=20) -> List[str]:
     openai.api_key = os.getenv('OPENAI_API_KEY')
 
     # prompt for GPT-3 model
-    enriched_prompt = "Generate related keywords for {} shop:".format(prompt)
+    enriched_prompt = "Generate related keywords for a {} business:".format(prompt)
 
     # calling the API and grabbing the response
     response = openai.Completion.create(model="text-davinci-002", prompt=enriched_prompt, max_tokens=max_tokens)
