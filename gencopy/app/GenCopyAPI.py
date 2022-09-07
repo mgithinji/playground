@@ -1,9 +1,19 @@
 from fastapi import FastAPI, HTTPException
 from GenCopy import generate_tagline, generate_keywords, MAX_INPUT_LENGTH
 from mangum import Mangum # used for creating the handler
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 handler = Mangum(app=app) # handler for Lambda function to invoke
+
+# mitigating CORS so browser doesn't block API responses
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
 # API for generating a tagline
 @app.get("/generate_tagline")
