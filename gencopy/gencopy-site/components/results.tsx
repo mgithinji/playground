@@ -10,7 +10,7 @@ const Results: React.FC<ResultsProps> = (props) => {
   // breaking the keywords into discrete elements
   const keywordElements = [];
   for (let i=0; i < props.keywords.length; i++){
-    const element = <div key={i}>{props.keywords[i]}</div>;
+    const element = <div>{props.keywords[i]}</div>;
     keywordElements.push(element);
   }
 
