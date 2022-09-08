@@ -71,9 +71,10 @@ const GenCopy: React.FC = () => {
           </div>
           {displayedElement}
         </div>
+        <div className="text-slate-400 text-xs my-4 justify-center flex"><p>project by <u><a href="https://www.linkedin.com/in/morgan-githinji/" target="_blank">Morgan Githinji</a></u></p></div>
       </div>
-      
     </div>
+
   );
 };
 
