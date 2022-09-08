@@ -57,7 +57,7 @@ const GenCopy: React.FC = () => {
 
   return (
     <>
-      <h1>GenCopy!</h1>
+      <h1 className="text-3xl">GenCopy!</h1>
       <h3>Your AI marketing partner</h3>
       {displayedElement}
     </>
