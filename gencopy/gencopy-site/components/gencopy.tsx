@@ -1,6 +1,8 @@
 import React from "react";
 import Form from "./form";
 import Results from "./results";
+import Image from "next/image";
+import logo from "../public/gencopy_logo.svg"
 
 const GenCopy: React.FC = () => {
   
@@ -55,12 +57,23 @@ const GenCopy: React.FC = () => {
     displayedElement = <Form prompt={prompt} setPrompt={setPrompt} onSubmit={onSubmit} characterLimit={CHARACTER_LIMIT} isLoading={isLoading}/>
   } 
 
+  // Tailwind gradient styling for text and page elements
+  const gradientTextStyle = "text-white text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-purple-400  w-fit mx-auto";
+
   return (
-    <>
-      <h1 className="text-3xl">GenCopy!</h1>
-      <h3>Your AI marketing partner</h3>
-      {displayedElement}
-    </>
+    <div className="h-screen flex">
+      <div className="max-w-md m-auto p-2">
+        <div className="bg-slate-800 p-6 rounded-md text-white">
+          <div className="text-center my-6">
+            <Image src={logo} width={60} height={60}/>
+            <h1 className={gradientTextStyle + " text-3xl font-light"}>GenCopy</h1>
+            <h3 className={gradientTextStyle}>Your AI branding assistant</h3>
+          </div>
+          {displayedElement}
+        </div>
+      </div>
+      
+    </div>
   );
 };
 
