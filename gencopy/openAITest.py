@@ -9,5 +9,5 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 prompt = "Write an worship hymn:"
 
 response = openai.Completion.create(model="text-davinci-002", prompt=prompt, max_tokens=500, temperature=0.11)
-# response = openai.Completion.create(model="text-ada-001", prompt=prompt, max_tokens=30, temperature=0.60)
+# response = openai.Completion.create(model="text-curie-001", prompt=prompt, max_tokens=30, temperature=0.8)
 print(response["choices"][0]["text"])
