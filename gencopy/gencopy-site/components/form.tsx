@@ -31,15 +31,15 @@ const Form: React.FC<FormProps> = (props) => {
 
       <div className="mb-6 text-slate-300">
         <p>
-          Tell me what your brand is about and I will 
-          generate copy and keywords for you.
+          Tell me what your business is about and I will 
+          generate a branding tagline and keywords for you.
         </p>
       </div>
       
       <input 
         className="p-2 w-full rounded-md focus:outline-purple-400 focus:outline text-slate-700"
         type="text" 
-        placeholder="hats" 
+        placeholder="coffee" 
         value={props.prompt}
         onChange={(e) => updatePromptValue(e.currentTarget.value)}>
       </input>
